@@ -7,9 +7,13 @@ Page({
    */
   data: {
     rsData: [],
+    array: ['申通', 'EMS', '顺丰', '圆通', '中通', '韵达', '天天', '汇通'],
     inputValue: "", //输入的内容
-    modalHidden: true, //模态框弹出状态
+    modalHidden: true, //模态框弹出状态,
+    index: '',
   },
+
+  /**申通="shentong" EMS="ems" 顺丰="shunfeng" 圆通="yuantong" 中通="zhongtong" 韵达="yunda" 天天="tiantian" 汇通="huitongkuaidi" 全峰="quanfengkuaidi" 德邦="debangwuliu" 宅急送="zhaijisong"*/
 
   bindKeyInput: function(e){
 
@@ -57,6 +61,16 @@ Page({
   modalChange: function () {
     this.setData({
       modalHidden: true
+    })
+  },
+
+
+  bindPickerChange: function(e){
+
+    this.setData({
+
+      index: e.detail.value,
+
     })
   }
 

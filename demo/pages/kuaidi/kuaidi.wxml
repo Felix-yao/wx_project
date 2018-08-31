@@ -1,0 +1,36 @@
+<!--main.wxml-->
+<view class="page">
+    <view class="container">
+        <view class="section">
+            <view class="section__title">你要快递编号的是：{{inputValue}}</view>
+            <input  bindinput="bindKeyInput" placeholder="请输入要查询的快递单号" value="{{inputValue}}"/>
+        </view>
+        <view class="btn-area">
+        <button type="primary" loading="{{loading}}"
+                disabled="{{disabled}}" bindtap="search"> 查询
+        </button>
+        </view>
+
+        <view class="container" style="align-items: center">
+            <view><text>快递详情:</text></view>
+        </view>
+        <view class="text_area">
+          <view wx:for="{{rsData}}" wx:key="time">
+            <text >
+                查询城市: {{item.context}}
+            </text>
+            <text >
+                查询时间: {{item.time}}
+            </text>
+            </view>
+        </view>
+
+
+
+        <modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange" bindcancel="modalChange">
+            {{modalErrorText}}
+        </modal>
+    </view>
+
+    
+</view>

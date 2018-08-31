@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/search/search",
+    "pages/index/index",
+    "pages/result/result",
+    "pages/kuaidi/kuaidi"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#00BFFF",
+    "navigationBarTitleText": "天气预报查询"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/search/search",
+        "text": "天气"
+      },
+      {
+        "pagePath": "pages/kuaidi/kuaidi",
+        "text": "快递"
+      }
+    ]
+  }
+}
